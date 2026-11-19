@@ -1,0 +1,4 @@
+import {notFound} from 'next/navigation';import {products} from '@/lib/products';import {lineFor} from '@/lib/portfolio';import {Navigation,Footer} from '../../../components/Navigation';import ProductDetail from '../../../components/ProductDetail';
+type Props={params:Promise<{slug:string;item:string}>};async function lookup(params:Props['params']){const {slug,item}=await params;const p=products.find(p=>p.slug===item);if(!p||lineFor(p).key!==slug)notFound();return p}
+export async function generateMetadata({params}:Props){const p=await lookup(params);return {title:p.name+' | Reach Vietnam Company Limited',description:p.description}}
+export default async function Detail({params}:Props){const p=await lookup(params);return <main id="top"><Navigation/><ProductDetail product={p}/><Footer/></main>}

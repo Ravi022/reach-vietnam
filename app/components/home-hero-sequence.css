@@ -1,0 +1,21 @@
+.home-hero-jump{display:flex;align-items:center;justify-content:center;gap:clamp(14px,4vw,58px);padding-block:16px}
+.home-hero-jump a{font-size:14px;line-height:1.45;text-align:center;color:#264637;padding:7px 0}
+.home-hero-jump a:hover,.home-hero-next:hover{text-underline-offset:4px;text-decoration:underline}
+.home-hero-sequence a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.home-hero-panel{--panel:#e7ebdf;--ink:#203a2c;--accent:#4a6654;background:var(--panel);color:var(--ink);border-bottom:1px solid #2543301a;scroll-margin-top:0}
+.home-hero-panel--fruit{--panel:#eff0d9;--ink:#263d27;--accent:#4f6c35}
+.home-hero-panel--spice{--panel:#f1e2d1;--ink:#462e22;--accent:#81563d}
+.home-hero-panel-inner{min-height:min(740px,88svh);display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);align-items:center;gap:clamp(28px,5vw,82px);padding-block:clamp(42px,6vw,88px)}
+.home-hero-panel--fruit .home-hero-panel-photo{grid-column:1;grid-row:1}
+.home-hero-panel--fruit .home-hero-panel-inner{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+.home-hero-panel--fruit .home-hero-panel-copy{grid-column:2}
+.home-hero-panel-copy h2{font:400 clamp(46px,6vw,99px)/.99 Georgia,'Times New Roman',serif;letter-spacing:-.052em;color:var(--ink);margin:0;text-wrap:balance}
+.home-hero-panel-copy h2 em{display:block;color:var(--accent);font-weight:400}
+.home-hero-kicker{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 20px}
+.home-hero-panel-summary{font-size:clamp(16px,1.3vw,19px);line-height:1.65;max-width:46ch;margin:21px 0 28px}
+.home-hero-panel-actions{display:flex;flex-wrap:wrap;gap:16px 23px;align-items:center}
+.home-hero-cta{display:inline-flex;align-items:center;min-height:48px;padding:11px 17px;background:var(--ink);color:#fff;font-size:14px;font-weight:600}
+.home-hero-cta:hover{background:var(--accent)}
+.home-hero-next{color:var(--ink);font-size:14px;font-weight:600}
+.home-hero-panel-photo{margin:0;min-width:0;overflow:hidden;background:#fff4}
+@media(max-width:760px){.home-hero-jump{flex-wrap:wrap;justify-content:flex-start;gap:5px 19px}.home-hero-panel-inner,.home-hero-panel--fruit .home-hero-panel-inner{grid-template-columns:1fr}.home-hero-panel--fruit .home-hero-panel-copy,.home-hero-panel--fruit .home-hero-panel-photo{grid-column:auto;grid-row:auto}}
